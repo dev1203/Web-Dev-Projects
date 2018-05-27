@@ -8,29 +8,35 @@ body,html{
 	color: white;
 	padding: 2% 0%;
 }
-h1{
+h1,span,h4,button{
 	text-transform: uppercase;
 }
-.play{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	text-align:center;
-	color: purple;
+.box{
+	width: 30%;
+	float:left;
+	margin:1.66%;
+	padding-bottom: 30%;
+	border-radius:25px;
+}
+.container{
+	max-width:600px;
+	margin: 0 auto;
 }
 
 button{
-	background-color:#eb4641;
+	margin:0;
+	padding: 10px;
+	background-color: transparent;
 	border: none;
+	width: 70px;
+	text-align: center;
 }
-.main{
-	padding-top: 5%;
-	height: 65%;
-	background-color: black;
-	padding-left: 15%;
+.active{
+	background-color:#eb4641 ;
 }
-.first{
-	width: 60%;
-	height: 200px;
-	background-color: black;
-	border-radius: 25px;
+.nav{
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
 }
