@@ -30,13 +30,25 @@ button{
 	border: none;
 	width: 70px;
 	text-align: center;
+	height: 100%;
 }
 .active{
 	background-color:#eb4641 ;
 }
 .nav{
+	text-align:center;
+	font-weight: 700;
+	font-size: inherit;
+	color: steelblue;
+	
+}
+#stat{
+	display: inline-block;
+	width: 23%;
+}
+/*.nav{
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
   justify-content: space-between;
-}
+}*/
