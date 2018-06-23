@@ -14,4 +14,28 @@ var scores,round_score,active_player,dice;
 scores = [0,0];
 round_score = 0;
 active_player = 0;
-dice = Math.floor(Math.random()*6)+1;
+document.querySelector('.dice').style.display='none';
+document.getElementById('current-0').textContent='0';
+document.getElementById('current-1').textContent='0';
+document.getElementById('score-0').textContent='0';
+document.getElementById('score-1').textContent='0';
+
+document.querySelector(".btn-roll").addEventListener('click',function(){
+    dice = Math.floor(Math.random()*6)+1;
+    document.querySelector('.dice').style.display='block';
+    document.querySelector('.dice').src = './dice-' + dice + '.png';
+    if( dice !==1 ) {
+        var current_score=Number(document.querySelector('#current-' + active_player).textContent);
+        current_score+=dice;
+        document.querySelector('#current-' + active_player).textContent=current_score;
+    }else{
+        if(active_player==0){
+            active_player=1;
+        }
+        else{
+            active_player=0;
+        }
+
+    }
+
+});
