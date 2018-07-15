@@ -1,17 +1,94 @@
+// // // const year=[1990,1997,2015,2014];
+// // //
+// // // //ES5
+// // // // year.map(function(element){
+// // // // 	console.log(element);
+// // // // });
+// // //
+// // // //ES6
+// // //
+// // // // year.map((element)=>{
+// // // // 	console.log(element);
+// // // // })
+// // //
+// // //
+// // // let ages=year.map(el => 2018-el);
+// // //
+// // // // console.log(ages);
+// // //
+// // //
+// // // ages=year.map( (element,index) =>
+// // // 	`element ${index} age's is ${2018-element}`
+// // // 	);
+// // //
+// // // // console.log(ages);
+// // //
+// // // ages=year.map((el,index) => {
+// // // 	console.log(el);
+// // // 	console.log(index);
+// // // 	return el*index;
+// // // });
+// // //
+// // // console.log(ages);
+// //
+// // var box5={
+// //     color:'green',
+// //     postiion: 1,
+// //     clickme:function (){
+// //         console.log(this.color);
+// //         document.querySelector('.green').addEventListener('click',function(){
+// //            alert("Color of the box is "+box5.color);
+// //         });
+// //     }
+// // };
+// //
+// // box5.clickme();
+// //
+// // const box6={
+// //     color:'green',
+// //     postiion: 1,
+// //     clickme:function (){
+// //         console.log(this.color);
+// //         document.querySelector('.green').addEventListener('click',()=>{
+// //            alert('This is box' +this.color);
+// //         });
+// //     }
+// // };
+// // box6.clickme();
+//
+// var person=function(name){
+//     this.name=name;
+// };
+//
+// person.prototype.seefriend=function(friends){
+//     var arr=friends.map((el)=>{
+//         return el+' nice '+this.name;
+//     });
+//     console.log(arr);
+//
+//     var arr=friends.map(function(el){
+//         return  el+' nice '+this.name;
+//     });
+//     console.log(arr);
+// }
+// var friends=['Chang',"Annie",'Kat','Mat'];
+// new person('Dev').seefriend(friends);
+//
+// function returnName(){
+//     return ['Dev','Singh']
+// }
+//
+// const [firstName,lastName]=returnName();
+//
+// console.log(firstName);
+// console.log(lastName);
 
-var object={
-    name:"dev",
-    yob:"1997",
-    calculate_age:function(){
-        console.log(2018-this.yob);
-    }
-};
-
-
-var next={
-    name:'next',
-    yob:'2013'
-}
-
-next.calculate_age=object.calculate_age;
-next.calculate_age();
+// var box=Array.from(document.querySelectorAll('.box'));
+// for(const el of box){
+//     console.log(el.textContent);
+// }
+// var ages=[8,12,34,5,3,223];
+// var fullages=ages.map(function (el) {
+//    return el>18;
+// });
+// console.log(fullages);
