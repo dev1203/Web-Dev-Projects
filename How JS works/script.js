@@ -92,3 +92,16 @@
 //    return el>18;
 // });
 // console.log(fullages);
+//
+//
+// const ages=[1,23,4,5,6];
+// const yob=[1997,1992,1995,1990];
+//
+// const final=[...ages,...yob];
+
+
+function fullage(...arg) {
+  console.log(args);
+}
+
+fullage(1990,1997,1995,2005);
