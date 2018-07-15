@@ -99,9 +99,18 @@
 //
 // const final=[...ages,...yob];
 
+//
+// function fullage(...arg) {
+//   console.log(args);
+// }
+//
+var question=new Map();
 
-function fullage(...arg) {
-  console.log(args);
+question.set('Name','dev');
+question.set('Age','21');
+
+for(let [key,value] of question){
+    console.log(key);
+    console.log(value);
 }
 
-fullage(1990,1997,1995,2005);
