@@ -103,14 +103,29 @@
 // function fullage(...arg) {
 //   console.log(args);
 // }
+// //
+// var question=new Map();
 //
-var question=new Map();
+// question.set('Name','dev');
+// question.set('Age','21');
+//
+// for(let [key,value] of question){
+//     console.log(key);
+//     console.log(value);
+// }
 
-question.set('Name','dev');
-question.set('Age','21');
+// classes
 
-for(let [key,value] of question){
-    console.log(key);
-    console.log(value);
+class person{
+    constructor(name,yob,job){
+        this.name=name;
+        this.job=job;
+        this.yob=yob;
+    }
+    calculateAge(){
+        var a=(new Date().getFullYear-this.yob);
+        console.log(new Date());
+    }
 }
-
+let Dev=(new person('Dev',1997,'QA'));
+Dev.calculateAge();
