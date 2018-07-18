@@ -1,29 +1,26 @@
-//ASync JS
-// const one=()=>{
-//     setInterval(()=>{
-//         console.log('callback');
-//     },1000)
-// };
-//
-// const two=()=>{
-//     console.log('Start');
-//     one();
-//     console.log('End');
-// };
-// two();
+function one(){
+	return new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			resolve([10,20,30,40]);
+		},1500);
+	});
+}
+function two(){
+	return new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			resolve([111,222,333,444])
+		},1500);
+	});
+}
 
-////////////////////////////////////////
-// Callback hell
-
-// const one=()=>{
-//     setTimeout(()=>{
-//         console.log('One');
-//         setTimeout(()=>{
-//             console.log('two');
-//             setTimeout(()=>{
-//                 console.log('Three');
-//                 },1500);
-//             },1500);
-//         },2000);
-// };
-// one();
+one().
+then((result)=>{
+	console.log(...result);
+	return two();
+})
+.then((el)=>{
+	console.log(...el);
+})
+.catch((error)=>{
+	console.log(error);
+})
